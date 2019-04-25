@@ -16,5 +16,5 @@ for DIR in $(ls $PATH_PAIRS); do
     fi
 
     # Generate a new image made of concatenating those two images
-    ./merge_images --input $IMAGE0 $IMAGE1 --output $PATH_MERGED/$DIR.png
+    ./merge_images.py --input $IMAGE0 $IMAGE1 --output $PATH_MERGED/$DIR.png
 done

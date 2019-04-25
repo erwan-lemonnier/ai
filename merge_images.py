@@ -15,7 +15,6 @@ def main(input, output):
     assert output, "You must provide an output path (--help for help)"
 
     images = [Image.open(i) for i in input]
-    print("Images is %s" % images)
     widths, heights = zip(*(i.size for i in images))
 
     total_width = sum(widths)
@@ -25,7 +24,6 @@ def main(input, output):
 
     x_offset = 0
     for im in images:
-      print("Adding %s to new image" % im)
       new_im.paste(im, (x_offset, 0))
       x_offset += im.size[0]
 
